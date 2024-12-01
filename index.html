@@ -3,105 +3,57 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Efficient JavaScript solution for balancing strings with '<' and '>' characters using specified maximum replacements. Includes examples, explanations, and code implementation.">
-    <meta name="keywords" content="JavaScript, string balancing, algorithms, coding challenge, balancedOrNot, max replacements">
-    <meta name="author" content="Kalpesh Dalal">
+    <meta name="description" content="Find the JavaScript solution to the 'balanced or not' string problem with detailed explanations and examples. Optimized for clarity and performance, hosted on GitHub.">
+    <meta name="keywords" content="JavaScript string balance problem, balancedOrNot function, coding solutions, balanced expressions JavaScript, GitHub solutions">
+    <meta name="author" content="Kalpesh Pradeep Dalal">
     <meta name="robots" content="index, follow">
-    <title>String Balancing Algorithm in JavaScript</title>
-    <link rel="canonical" href="https://example.com/string-balancing-solution">
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            margin: 0;
-            padding: 0;
-            background: #f9f9f9;
-            color: #333;
-        }
-        header {
-            background: #0073e6;
-            color: #fff;
-            padding: 10px 0;
-            text-align: center;
-        }
-        main {
-            padding: 20px;
-            max-width: 800px;
-            margin: 0 auto;
-        }
-        pre {
-            background: #eee;
-            padding: 10px;
-            border-radius: 5px;
-            overflow-x: auto;
-        }
-        footer {
-            text-align: center;
-            padding: 10px 0;
-            background: #333;
-            color: #fff;
-            position: fixed;
-            width: 100%;
-            bottom: 0;
-        }
-    </style>
+    <meta property="og:title" content="Balanced or Not Problem Solution | JavaScript | GitHub">
+    <meta property="og:description" content="Explore the JavaScript solution for the balanced string problem with examples and an optimized approach.">
+    <meta property="og:url" content="https://kalpeshdalal.github.io/kalpesh-dalal/">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://example.com/preview-image.jpg"> <!-- Replace with a relevant image URL -->
+    <title>Balanced String Problem Solution in JavaScript | GitHub</title>
+    <link rel="canonical" href="https://kalpeshdalal.github.io/kalpesh-dalal/">
 </head>
 <body>
     <header>
-        <h1>JavaScript Solution: Balancing Strings with '<' and '>'</h1>
+        <h1>Balanced or Not: JavaScript Solution</h1>
+        <p>Your go-to resource for solving the balanced string problem with <code>balancedOrNot</code> function. Hosted on my GitHub!</p>
     </header>
+    
     <main>
-        <article>
-            <h2>About the Algorithm</h2>
-            <p>
-                This JavaScript solution determines whether strings consisting of '<' and '>' characters can be balanced using a given number of replacements. The function checks balance, processes replacements, and outputs the results for various inputs.
-            </p>
+        <section id="problem-statement">
+            <h2>Problem Statement</h2>
+            <p>This problem involves determining whether a string consisting of '<' and '>' characters can be balanced using a specific number of replacements.</p>
+        </section>
 
-            <h3>How the Algorithm Works</h3>
-            <ol>
-                <li>Iterates through each string in the array.</li>
-                <li>Keeps track of unmatched '>' characters and calculates necessary replacements.</li>
-                <li>Compares required replacements with the allowed maximum replacements.</li>
-                <li>Outputs `1` for balanced strings and `0` for unbalanced strings.</li>
-            </ol>
+        <section id="solution">
+            <h2>Solution Overview</h2>
+            <p>The JavaScript solution, along with examples and explanations, is available in the README file of my GitHub repository. Access it below:</p>
+            <a href="https://github.com/kalpeshdalal" target="_blank">View Solution on GitHub</a>
+        </section>
 
-            <h3>Code Implementation</h3>
-            <pre>
-function balancedOrNot(expressions, maxReplacements) {
-    return expressions.map((expression, index) => {
-        let stack = 0; 
-        let replacements = 0;
-
-        for (const char of expression) {
-            if (char === '<') {
-                stack++;
-            } else if (char === '>') {
-                if (stack > 0) {
-                    stack--;
-                } else {
-                    replacements++;
-                }
-            }
-        }
-
-        return stack === 0 && replacements <= maxReplacements[index] ? 1 : 0;
-    });
-}
-
-// Example usage:
-const expressions = ['<>>>', '<>>>>'];
-const maxReplacements = [2, 2];
-console.log(balancedOrNot(expressions, maxReplacements)); // Output: [1, 0]
-            </pre>
-
-            <h3>SEO Benefits of Structured Content</h3>
-            <p>
-                This page is optimized with semantic HTML, metadata, and examples to help developers understand and implement string balancing algorithms in JavaScript. 
-            </p>
-        </article>
+        <section id="examples">
+            <h2>Examples</h2>
+            <ul>
+                <li><strong>Input:</strong> expressions = ['<>>>'], maxReplacements = [2] <br><strong>Output:</strong> [1]</li>
+                <li><strong>Input:</strong> expressions = ['<<>>', '<>>>>'], maxReplacements = [2, 2] <br><strong>Output:</strong> [1, 0]</li>
+            </ul>
+        </section>
     </main>
+
     <footer>
-        <p>Developed by Kalpesh Dalal | <a href="mailto:kalpeshdalal305@gmail.com">Contact</a></p>
+        <p>Created by <a href="https://kalpeshdalal.github.io/kalpesh-dalal/" target="_blank">Kalpesh Dalal</a></p>
     </footer>
+
+    <script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "WebPage",
+        "name": "Balanced String Problem Solution in JavaScript",
+        "description": "Detailed JavaScript solution to the balanced string problem hosted on GitHub. Includes examples and SEO optimization.",
+        "url": "https://kalpeshdalal.github.io/kalpesh-dalal/"
+    }
+    </script>
 </body>
 </html>
